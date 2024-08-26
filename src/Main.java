@@ -13,9 +13,9 @@ public class Main {
         c1.setCargaHoraria(4);
 
         Curso c2 = new Curso();
-        c1.setTitulo("Curso CSS");
-        c1.setDescricao("Descrição curso CSS");
-        c1.setCargaHoraria(6);
+        c2.setTitulo("Curso CSS");
+        c2.setDescricao("Descrição curso CSS");
+        c2.setCargaHoraria(6);
 
         Mentoria m1 = new Mentoria();
         m1.setTitulo("Mentoria de Java");
@@ -30,10 +30,17 @@ public class Main {
         bc1.getConteudos().add(m1);
 
         d1.inscreverBootcamp(bc1);
+
+        System.out.println("Conteudos inscritos: " + d1.getConteudosInscritos());
+        System.out.println("XP total: " + d1.calcularTotalXP());
+        System.out.println("Conteudos concluidos: " + d1.getConteudosConcluidos());
+
+        System.out.println("-----------------");
         d1.progredir();
         d1.progredir();
 
-        System.out.println(d1.getConteudosInscritos());
-        System.out.println(d1.getConteudosConcluidos());
+        System.out.println("Conteudos inscritos: " + d1.getConteudosInscritos());
+        System.out.println("XP total: " + d1.calcularTotalXP());
+        System.out.println("Conteudos concluidos: " + d1.getConteudosConcluidos());
     }
 }
